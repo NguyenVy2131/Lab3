@@ -4,11 +4,13 @@
  */
 package com.mycompany.hrmanagement;
 
+import java.util.Scanner;
+
 /**
  *
  * @author LENOVO
  */
-public class employee {
+public abstract class employee {
     private String id;
     private String name;
     private int yearOfBirth;
@@ -67,7 +69,22 @@ public class employee {
     }
     public void InputEmployee()
     {
-        Sc
+        Scanner sc = new Scanner(System.in);
+        System.out.print("The id of employee: ");
+        id = sc.nextLine();
+        System.out.print("The name of employee: ");
+        name = sc.nextLine();
+        System.out.print("The year of birth of employee: ");
+        yearOfBirth = sc.nextInt();
+        sc.nextLine();
+        System.out.print("The address of employee: ");
+        address = sc.nextLine();
+        System.out.print("The phone number of employee: ");
+        phone = sc.nextLine();
     }
+    
+    public abstract void getInfo();
+    public abstract double getPayment();
+    
     
 }

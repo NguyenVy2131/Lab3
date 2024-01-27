@@ -135,13 +135,14 @@ public class CDStore {
         for (CDdetail i : list) {
             if (i.getCDid() == ID) {
                 list.remove(i);
-                System.out.println("Delete successfull");
-                flag = true;
+                 flag = true;
             } 
         }
         if(!flag){
             System.out.println("The store does not have this ID");
         }
+        else
+            System.out.print("Deleted successfully");
     }
 
     public void sort() {
@@ -216,7 +217,7 @@ public class CDStore {
         System.out.print("The store does not have this ID");
         }
         else{
-            System.out.print("Editied successfull");
+            System.out.print("Editied successfully");
         }
     }
 }
